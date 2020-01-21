@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    justify-content: center;
+    color: gray;
+}
+
+.message-block {
+    height: auto;
+}
+
+.comments {
+    justify-self: center;
+}
+
+.message {
+    padding-top: 20px;
+    font-size: 24px;
+}
+.video {
+    width: 100%;
+    height: 75%;
+    min-height: 300px;
+    object-fit: contain;
+}
+
+.comments__input {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+
+.comments__output {
+    max-width: 550px;
+    max-height: auto;
+    border: none;
+    border-top: 2px solid rgb(225, 225, 225);
+}
+
+
+.comment .date {
+    font-size: 10px;
+    color: rgb(218, 218, 218);
+}
+.comment hr {
+    color: rgb(218, 218, 218);
+}
+
+#inputText {
+    overflow: hidden; 
+    border:none;
+    max-width: 470px; 
+    outline: none;
+    font-size: 32px;
+    margin-right: 10px;
+}
+#inputText::placeholder {
+    color: rgb(199, 198, 198);
+}
+
+#butComment {
+    background: #7ec03c;
+    border: none;
+    outline: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    color: aliceblue;
+}
+#butComment:hover {
+    background-color: rgb(146, 212, 80);
+    text-shadow: 0px 0px 2px;
+    transition-duration: .2s;
+}
+#butComment:active {
+    background: #7ca752;
+    transition: .2s;
+}
+
+.subtitle {
+    margin-top: 50px;
+}
+
+.message img {
+    width: 600px;
+}
+
+@media screen and (max-width: 540px) {
+    .video {
+        min-height: 250px;
+    }
+    #inputText {
+        font-size: 22px;
+    }
+    #butComment {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .message-block h1 {
+        font-size: 14px;
+    }
+    .video {
+        min-height: 150px;
+    }
+    #inputText {
+        font-size: 16px;
+    }
+    #butComment {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-radius: 15px;
+    color: #7ca752;
+    }
+    #butComment:hover {
+        background-color: rgba(255,255,255,0);
+        border-radius: 3px;
+        text-shadow: 0px 0px 2px;
+        transition-duration: 0;
+    }
+    #butComment:active {
+        background: none;
+        transition: 0;
+    }
+}
